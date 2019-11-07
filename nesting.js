@@ -50,9 +50,16 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
-
-
+function employeeUpdater(){
+  for(i=0; i < employees.length; i++){
+    if(employees[i].firstName === 'Theo'){
+      employees.splice(i, 1)
+    } else if(employees[i].firstName === 'Lorie'){
+      employees[i].department = "HR"
+    }
+  }
+  return employees;
+}
 
 ////////// PROBLEM 2 //////////
 
@@ -68,8 +75,18 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates(){
+  for(let i = 0; i < workplaceAccidents.length; i++) {
+    for(let j = workplaceAccidents.length -1; j >= 0; j--) {
+      if (workplaceAccidents[i] === workplaceAccidents[j] && i !== j) {
+        workplaceAccidents.splice(j, 1)
+      }
 
+    }
+  }
+  return workplaceAccidents
+}
+// console.log(removeDuplicates())
 
 
 ////////// PROBLEM 3 //////////
@@ -90,15 +107,18 @@ var cat = {
 }
 // Do not edit the code above.
 
+//Code Here
+
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
+
 /*
   Fluffy has two friends, Grumpy and Lazy Bones. 
     1. Assign the value of Grumpy's 2nd activity to the grumpyActivity variable below.
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+
 
 
 
@@ -138,7 +158,13 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner(){
+  for(let i = 0; i < myCar.accidents.length; i++) {
+    if(myCar.accidents[i].atFaultForAccident === true){
+     myCar.accidents[i].atFaultForAccident = false
+    }
+  }
+}
 
 
 
@@ -157,6 +183,18 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+function looper(){
+  for(let i = 0; i < numsArr.length; i++){
+    for(let j = 0; j < numsArr[i].length; j++){
+      if(numsArr[i][j] % 2 === 1){
+        numsArr[i][j] = 'odd'
+      } else{
+        numsArr[i][j] = 'even'
+      }
+    }
+  }
+  return numsArr;
+}
 
+looper()
 

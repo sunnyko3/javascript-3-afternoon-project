@@ -18,6 +18,9 @@
 //   four: ' property',
 //   five: ' values.'
 // } 
+// console.log(values)
+// values.four='happy'
+// console.log(values)
 
 // for(var key in values) {
 //   console.log(values[key])
@@ -40,7 +43,11 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  var newStr = ""
+  for(var key in obj) {
+    newStr += obj[key]
+  }
+  return newStr
 }
 
 
@@ -53,7 +60,13 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(obj){
+  for(let key in obj){
+   if(obj[key]>10){
+    obj[key]=0}
+  }
+  return obj
+}
 
 
 
@@ -65,9 +78,12 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
-
-
+function double(obj){
+  for(let key in obj){
+      obj[key] = obj[key] * 2;
+    }
+    return obj;
+  }
 
 ////////// PROBLEM 4 //////////
 
@@ -79,7 +95,12 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+// function secret(obj){
+//   let name = [''];
+//   for(let key in obj){
+//     obj[key] = 'sh'
+//   }
+// }
 
 
 
